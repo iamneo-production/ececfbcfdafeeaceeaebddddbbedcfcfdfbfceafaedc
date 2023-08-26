@@ -6,9 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 @RequestMapping
 public class UserController {
     
-   @PostMapping("/saveTask")
-   public void newTask(@RequestBody task){
+    @Autowired
+    private UserService userService;
 
+   @PostMapping("/saveTask")
+   public void newTask(@RequestBody TaskModel task){
+        
    }
 
 }
